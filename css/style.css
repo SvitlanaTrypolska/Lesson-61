@@ -1,140 +1,105 @@
-* { 
-  
-    box-sizing: border-box;
-  }
-  .body {
 
+
+  * {
     margin: 0;
     padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
+    border: none;
     outline: none;
-    display: inline-block;
-   
-  }
-   
-    
-  .header {
-  display: inline-block; 
-  font-size: 16px;
-  box-sizing: border-box;
-  width: 1200px;
-  height: 53px;
-  }
-  .group {
-    width : 150px;
-     height:34px;
-    padding: 5px;
-    display: inline-block;
-    font-size: 16px;
-    text-align: left;
-    
-   
-  }
-  
-  
-  .text ul {
-    display: inline-block;
-    flex-flow: row nowrap;      
-    font-size: 16px;
-    padding: 15px 450px;
-    text-align: center;    
-    width: calc(100%-250px);
-  border: 2px solid black;
- 
-  
-  }
-  .home {
-    display: inline-block;
-    padding: 5px 5px 5px 5px;
-    font-size: 16px;
-    
+    box-sizing: border-box;
   }
 
-  .shop {
-    display: inline-block;
-    padding: 5px 5px 5px 5px;
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100vh;
+  }
+  header {
+    padding-top: 30px;
+    font-size: 0;
+    padding-bottom: 18px;
+    border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+    greenshop.svg {
+      vertical-align: middle;
+    }
+  }
+  nav {
     font-size: 16px;
-   
+    display: inline-block;
+    width: calc(100% - 250px);
+    text-align: center;
+    padding-right: 150px;
+    a {
+      padding-bottom: 28px;
+      color: black;
+      text-decoration: none;
+      font-weight: 400;
+    }
+    a:not(:last-child) {
+      margin-right: 50px;
+    }
+    a.active {
+      font-weight: bold;
+      border-bottom: 3px solid rgba(70, 163, 88, 1);
+    }
   }
 
-  .plantcare {
-    display: inline-block;
-    padding: 5px 5px 5px 5px;
-    font-size: 16px;
-    
-
+  .btn {
+    background: rgba(70, 163, 88, 1);
+    color: white;
+    border-radius: 6px;
+    padding: 8px 16px;
   }
-  .blogs {
+
+  .button-btn {
     display: inline-block;
-    padding: 5px 5px 5px 5px;
-    font-size: 16px;
-    margin-top: 10px;
-
-
-  }
-    
-  .login {
-   
     width: 100px;
-    height: 35px;
-    padding: 10px ;
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 16px;
-    text-align: right;
+    img {
+      vertical-align: middle;
+      margin-top: -2px;
+      margin-right: 4px;
+    }
   }
-  .form main banner {
-    width: 1388px;
-    height: 411px;
-    display:inline-block;
-  }
-  .h6 {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 8px;
-    display: inline-block;
-  }
-  .h1 {
-    font-family: "Courier New", Courier, monospace;
-    width: 582px;
-    height: 123px;
-    background-color: black;
-    margin-top: 80px;
-    margin-left: 44px;
-    margin-right: 690px;
-       font-size: 20px;
-    border: 5px solid black;
-    display: inline-block;
-    padding-left: 5px;
-    padding-right: 1180px;
-  }
-  
-  .vazagrande {
-    width: 567px;
-        height:  411px;
-    display: inline-block;
+  .shop-btn {
+    padding: 11px 26px 9px;
+    margin-top: 44px;
   }
 
-  .vaza {
-    background-position: fixed;
-    margin-left: 820px;
-    margin-right: 348px;
-    margin-bottom: 52px;
-    display: inline-block;
-    vertical-align: auto;
-    width: 148px;
-        height: 118px;
+  main {
+    margin-top: 12px;
+    background: linear-gradient(
+      97.77deg,
+      rgba(245, 245, 245, 0.5) -23.46%,
+      rgba(245, 245, 245, 0.5) 107.51%
+    );
+    font-size: 0;
   }
-  .form-main-banner-btn {
-    font-family: Cera Pro;
+  .left-side,
+  .right-side {
     font-size: 16px;
-    font-weight: 700;
-    line-height: 20px;
-    text-align: left;
-    background: #0cea56;
-    width: 154px;
-    height: 35px;
+    display: inline-block;
   }
-
-  
+  .left-side {
+    padding: 68px 50px 85px 40px;
+    h1 {
+      font-size: 70px;
+      line-height: 70px;
+      text-transform: uppercase;
+      margin: 8px 0 5px;
+      span {
+        color: rgba(70, 163, 88, 1);
+      }
+    }
+  }
+  .right-side {
+    width: 507px;
+    vertical-align: top;
+    position: relative;
+    .second-img {
+      position: absolute;
+      bottom: 0;
+      left: 50px;
+    }
+  }
+  .left-side {
+    width: calc(100% - 507px);
+  }
