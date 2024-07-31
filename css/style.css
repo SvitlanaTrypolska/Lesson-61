@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Cera 'Pro;
+
+  src: url(./fonts/CeraPro-Bold.woff);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +13,7 @@
 }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 1210px;
   margin: 0 auto;
   height: 100vh;
 }
@@ -16,6 +22,8 @@ header {
   font-size: 0;
   padding-bottom: 18px;
   border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+  font-family: CeraPro-Bold, sans-serif;
+  width: 400;
  img {
     vertical-align: middle;
   }
@@ -23,9 +31,10 @@ header {
 nav {
   font-size: 16px;
   display: inline-block;
-  width: calc(100% - 235px);
+  width: calc(100% - 230px);
   text-align: center;
-  padding-right: 150px;
+  padding-right: 13
+  0px;
   a {
     padding-bottom: 28px;
     color: black;
