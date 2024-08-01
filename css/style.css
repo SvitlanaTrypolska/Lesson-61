@@ -1,7 +1,7 @@
 @font-face {
-  font-family: 'Cera 'Pro;
-
-  src: url(./fonts/CeraPro-Bold.woff);
+  font-family: 'CeraPro';
+  src: Local ('Cera Pro-Medium'),local('Cera Pro-Black'),local("CeraPro-Regular"), local(" CeraPro-Bold"),
+  url(./fonts/fonts.css)
 }
 
 * {
@@ -11,7 +11,10 @@
   outline: none;
   box-sizing: border-box;
 }
-
+ .body {
+  font-family: Cera-Pro,sans-serif;
+  font-size: 400;
+ }
 .wrapper {
   max-width: 1210px;
   margin: 0 auto;
@@ -92,6 +95,8 @@ main {
     line-height: 70px;
     text-transform: uppercase;
     margin: 8px 0 5px;
+    font-family: CeraPro-Bold, sans-serif;
+    width: 700;
     span {
       color: rgba(70, 163, 88, 1);
     }
