@@ -4,51 +4,85 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    
   </head>
   <body>
     <header>
-       <div class="wrapper">
-        
-          <img src="./images/greenshop.svg" alt="green" width="130" height="34" />
-          <nav>
-            <a href="#" class="active">Home</a>
-            <a href="#">Shop</a>
-            <a href="#">Plant Care</a>
-            <a href="#">Blogs</a>
-          </nav>
+      <div class="wrapper">
+        <nav class="nav">
+          <img
+            src="./images/greenshop.svg"
+            alt="green"
+            class="logo"
+            width="130"
+            height="34"
+          />
+          <ul class="menu">
+            <li class="menu-item"><a href="#" class="menu-link green">Home</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Shop</a></li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">Plant Care</a>
+              <ul class="submenu-down">
+                <li class="submenu-item"><a href="#">Drainage</a></li>
+                <li class="submenu-item"><a href="#">Fungicides</a></li>
+                <li class="submenu-item"><a href="#">Fertilizer </a></li>
+                <li class="submenu-item"><a href="#">Priming ></a>
+                  <ul class="submenu-right">
+                    <li class="submenu-right-item"><a href="#">Universal</a></li>
+                    <li class="submenu-right-item"><a href="#">For Ficus</a></li>
+                    <li class="submenu-right-item"><a href="#">For Cacti</a></li>
+                    <li class="submenu-right-item"><a href="#">For Citrus</a></li>
+                    <li class="submenu-right-item"><a href="#">For Those in Bloom</a></li>
+                    <li class="submenu-right-item"><a href="#">For Orchids</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item"><a href="#" class="menu-link">Blogs</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Contact</a></li>
+          </ul>
           <button class="btn button-btn">
-            <img src="./images/logout.svg" alt="button icon" width="20" height="20" />
+            <img
+              src="./images/logout.svg"
+              alt="button icon"
+              width="20"
+              height="20"
+            />
             <span>Login</span>
           </button>
-       </div>
-        </header>
-  
-        <main>
-          <div class="left-side">
-            <h3>Welcome to GreenShop</h3>
-            <h1>Let’s Make a Better <span>Planet</span></h1>
-            <p>
-              We are an online plant shop offering a wide range of cheap and
-              trendy plants. Use our plants to create an unique Urban Jungle.
-              Order your favorite plants!
-            </p>
-            <button class="btn shop-btn">Shop now</button>
-          </div>
-          <div class="right-side">
-            <img class="second-img" src="./images/vaza.png"
-              alt="second img"
-              width="135"
-              height="135"
-            />
-            <img
-              src="./images/vazagrande.png"
-              alt="main image"
-              width="507"
-              height="450" />
-          </div>
-        </main>
-      
-         </body>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="left-side">
+        <h3>Welcome to GreenShop</h3>
+        <h1>
+          Let’s Make a Better <span>Planet</span>
+        </h1>
+        <p>
+          We are an online plant shop offering a wide range of cheap and trendy
+          plants. Use our plants to create a unique Urban Jungle. Order your
+          favorite plants!
+        </p>
+        <button class="btn shop-btn">Shop now</button>
+      </div>
+      <div class="right-side">
+        <img
+          class="second-img"
+          src="./images/vaza.png"
+          alt="second img"
+          width="135"
+          height="135"
+        />
+        <img
+          src="./images/vazagrande.png"
+          alt="main image"
+          width="507"
+          height="450"
+        />
+      </div>
+    </main>
+  </body>
 </html>
