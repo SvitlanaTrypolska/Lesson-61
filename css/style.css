@@ -125,6 +125,7 @@ body {
   display: flex;
   align-items: center;
   background-color: transparent;
+  color: #EDF6EF;
   border: none;
   cursor: pointer;
   font-size: 14px;
@@ -135,7 +136,7 @@ body {
 }
 
 .btn span {
-  color: black;
+  color: white;
 }
 
 .btn:hover span {
@@ -318,25 +319,44 @@ body {
   background-color: #f9f9f9;
   border-bottom: 1px solid rgba(70, 163, 88, 0.5);
   margin-bottom: 10px;
+.nav {
+  display: flex;
+  
+}
  
 }
 .list{
   list-style-type: none;
   display: flex;
+  flex-wrap: nowrap; 
   gap: 50px;
   padding: 0;
   margin: 0;
+  align-items: center;
 }
 .list li {
   margin: 0;
+  flex-grow: 0;
 }
 .list li a{
   text-decoration: none;
   color: black;
+  transition: color 0.3s, text-decoration 0.3s; 
 }
-.list-arrow {
-  display: inline-block;
-  vertical-align: middle;
+.list li a:hover {
+  text-decoration: underline;
+  color: green;
+  border-bottom: 1px solid green;
+}
+.list li a span {
+  color: green;
+}
+.list .list-sale-sort {
+  margin-right: 385px;
+}
+.list .list-sale-sort {
+  margin-right: auto;
+  margin-left: 0;
 }
 .container-right {
   padding: 5px;
@@ -468,7 +488,8 @@ body {
   display: flex;
 position: relative;
   margin: 0px;
-  padding: 0;
+ 
+  padding-right: 91px;
  
 }
 
@@ -568,26 +589,38 @@ position: relative;
   display: none;
 }
 
-.main-images-logo1, .main-images-logo2, .main-images-logo3 {
-  display: flex;
+
+.main-images-logo1,
+.main-images-logo3 {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.main-images-logo2 {
+  display: flex; 
   justify-content: center;
   margin: 5px 0;
 }
-
-.main-images-logo1 button, .main-images-logo2 button, .main-images-logo3 button {
+.main-images-logo2 button {
   background: none;
   border: none;
   cursor: pointer;
   margin: 0 5px;
-  background-color: #f5f5f5;
-  color: white;
+  background-color: white;
+  color: black;
   transition: background-color 0.3s ease;
 }
-
-.main-images-logo1 button:hover, .main-images-logo2 button:hover, .main-images-logo3 button:hover {
-  opacity: 0;
+.main-images-logo1:hover,
+.main-images-logo3:hover {
+  opacity: 1;
 }
-  
+.main-images-logo1 button:hover,
+.main-images-logo2 button:hover,
+.main-images-logo3 button:hover {
+  opacity: 0.8;
+}
+
+
+
 .flex-item3 {
   position: relative;
 }
@@ -692,7 +725,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2px;
+  padding: 5px;
+  
 }
 
 .button-find_more img {
@@ -785,8 +819,19 @@ a {
   justify-content: center;
   gap: 3px;
   margin-bottom: 13px;
+  cursor: pointer;
+}
+.button-find_more svg {
+  
+  width: 7px; 
+  height: 12px; 
+  fill: currentColor;
 }
 
+
+.button-find_more:hover {
+  color: rgba(0, 0, 0, 0.7); 
+}
 .button-read_more img {
   width: 16px;
 }
@@ -1020,4 +1065,4 @@ a {
 
   }
 
-
+  
