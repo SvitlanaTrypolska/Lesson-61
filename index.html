@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" maximum-scale="1.0" />
 
     <link rel="stylesheet" href="./css/fonts.css" />
     <link rel="stylesheet" href="./css/reset.css" />
@@ -11,6 +11,7 @@
     <script src="https://kit.fontawesome.com/9359d6da11.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="loading-bar.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./script.js">
     <title>Document</title>
 </head>
 
@@ -51,15 +52,47 @@
                         <a href="#"><i class="fa-solid fa-magnifying-glass fa-xs"></i></a>
                         <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
 
-                        <button class="btn button-btn">
+                        <button class="btn button-btn" id="login-button">
                             <img src="./images/logout.svg" alt="button icon" width="20" height="20" />
                             <span>Login</span>
+                            <div class="spinner">
+                                <div></div>
+                                <div></div>
+                            </div>
                         </button>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                const button = document.querySelector('#login-button');
+                    
+                                if (button) {
+                                    button.addEventListener('click', function(e) {
+                                        e.preventDefault();
+                    
+                                        const span = button.querySelector('span');
+                                        const img = button.querySelector('img');
+                                        const spinner = button.querySelector('.spinner');
+                    
+                                        if (span) span.style.display = 'none';
+                                        if (img) img.style.display = 'none';
+                                        if (spinner) spinner.style.display = 'block';
+                    
+                                        setTimeout(function() {
+                                            if (span) span.style.display = 'inline-block';
+                                            if (img) img.style.display = 'inline-block';
+                                            if (spinner) spinner.style.display = 'none';
+                                        }, 3000);
+                                    });
+                                } else {
+                                    console.error("Кнопка с id='login-button' не найдена!");
+                                }
+                            });
+                        </script>
+                    
                     </div>
                 </nav>
 
             </header>
-
+            
             <div class="main-start">
                 <div class="left-side">
                     <h3>Welcome to GreenShop</h3>

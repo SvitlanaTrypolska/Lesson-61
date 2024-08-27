@@ -225,15 +225,18 @@ body {
   color: green;
 }
 
-
 .button-btn {
-  display: flex;
+  display: inline-block;
+  position: relative;
   align-items: center;
-  background-color: rgba(70, 163, 88, 1);
+  justify-content: center;
+  background-color: green;
   color: white;
   border-radius: 6px;
   padding: 8px 16px;
   font-weight: 700;
+  border: none;
+  cursor: pointer;
 }
 
 .button-btn img {
@@ -244,29 +247,79 @@ body {
   background-color: #5abf72;
 }
 
-
-.shop-btn {
-  background-color: rgba(70, 163, 88, 1);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 11px 26px;
-  margin-top: 44px;
-  font-size: 16px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+.spinner {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  display: none;
 }
 
-.shop-btn:hover {
-  background-color: #5abf72;
+.spinner > div {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 13.4px solid rgba(71, 75, 255, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: spinner-g7vlvwmd 0.65s linear infinite;
 }
 
+.spinner > div::before {
+  content: '';
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: #474bff;
+  position: absolute;
+  top: 50%;
+  animation: spinner-h1vps1md 1.3s infinite reverse steps(1);
+  transform: translate(calc(2 * var(--translate-2)), calc(var(--translate) * 1%));
+}
 
+.spinner > div:nth-of-type(1) {
+  --translate: -50;
+  --translate-2: calc(20px / 8);
+}
 
+.spinner > div:nth-of-type(1)::before {
+  right: 0;
+}
 
+.spinner > div:nth-of-type(2) {
+  --translate: 50;
+  --translate-2: calc(-20px / 8);
+  animation-delay: 0.65s;
+  animation-direction: reverse;
+  transform: translate(7.1px, 0);
+}
 
+.spinner > div:nth-of-type(2)::before {
+  left: 0;
+  transform: translate(calc(-20px / 4), -50%);
+  animation-direction: normal;
+}
 
+@keyframes spinner-h1vps1md {
+  0% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+}
+
+@keyframes spinner-g7vlvwmd {
+  from {
+      transform: translate(calc(var(--translate) * 1%), 0) translate(calc(var(--translate-2)), 0) rotate(0deg);
+  }
+  to {
+      transform: translate(calc(var(--translate) * 1%), 0) translate(calc(var(--translate-2)), 0) rotate(360deg);
+  }
+}
 
 .container-centre {
   display: flex;
